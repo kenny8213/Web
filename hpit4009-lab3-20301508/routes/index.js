@@ -5,5 +5,5 @@ var router = express.Router();
 router.get('/', (req, res, next) => {
   res.render('index', { title: 'Express (Chan Ka Ho .....)' , email: 'kenchan8213@gmail.com'}); 
 }); 
-  
+
 module.exports = router;
