@@ -5,8 +5,9 @@ var users = require('../users.json');
 /* GET home page. */
 router.get('/', (req, res, next) => {
   res.render('index', {
-    title: 'Express (Chan Ka Ho .....)' ,
-    email: 'kenchan8213@gmail.com'}); 
+    title: 'User Listing (Chan Ka Ho .....)',
+    users: users
+  }); 
 }); 
 
 module.exports = router;

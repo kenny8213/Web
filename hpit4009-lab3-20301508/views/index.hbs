@@ -1,3 +1,9 @@
 <h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
-<p>Email: {{email}}</p>
+
+<ul class="list-group">
+    {{#each users}}
+        <li class="list-group-item">
+            {{this.name}}
+        </li>
+    {{/each}}
+</ul>
