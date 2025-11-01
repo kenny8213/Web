@@ -1,9 +1,10 @@
+<a href="/">Home</a>|<a href="/about.html">About</a>
 <h1>{{title}}</h1>
 
 <ul class="list-group">
     {{#each users}}
         <li class="list-group-item">
-            {{this.name}}
+            <a href="/user/{{this.id}}">{{this.name}}</a>
         </li>
     {{/each}}
 </ul>
