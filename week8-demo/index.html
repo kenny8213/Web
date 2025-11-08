@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <h1>Weather Forecast</h1>
+    <hr>
+    <div id="weather_info">loading weather data ...</div>
+
+
+    <script>
+        console.log('JS is running')
+        apiUrl = 'https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=fnd&lang=tc';
+        fetch(apiUrl)
+        .then(response => response.json()) // geting response from API
+        .then(data => { // processing JSON data
+            console.log(data)
+            weatherInfoDiv = document.getElementById('weather_info')
+            weatherInfoDiv.innerHTML = data.generalSituation
+            weatherInfoDiv.innerHTML = data.weatherForecast[0].forecastMintemp.value
+        }
+        );
+    </script>
+</body>
+</html>
